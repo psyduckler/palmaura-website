@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Palmaura — AI palm readings from a photo</title>
-  <meta name="description" content="Palmaura turns a palm photo into a beautiful, personal AI palm reading: love, career, energy, and the story written in your hands." />
+  <title>PalmAura — read the map in your hand</title>
+  <meta name="description" content="PalmAura is an iOS palm reading app that traces the visible lines in your hand and turns a palm photo into a beautiful symbolic reading." />
   <link rel="canonical" href="https://palmaura.app/" />
-  <meta name="theme-color" content="#130817" />
-  <meta property="og:title" content="Palmaura — AI palm readings from a photo" />
-  <meta property="og:description" content="A mystical, personal, instantly shareable palm reading app. Coming soon." />
+  <meta name="theme-color" content="#e9dfc8" />
+  <meta property="og:title" content="PalmAura — read the map in your hand" />
+  <meta property="og:description" content="A vintage-inspired AI palm reading app for iOS. Trace your palm lines, receive a symbolic reading, and save the story written in your hand." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://palmaura.app/" />
   <meta property="og:image" content="https://palmaura.app/og.svg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Palmaura — AI palm readings from a photo" />
-  <meta name="twitter:description" content="A mystical, personal, instantly shareable palm reading app. Coming soon." />
+  <meta name="twitter:title" content="PalmAura — read the map in your hand" />
+  <meta name="twitter:description" content="A vintage-inspired AI palm reading app for iOS." />
   <meta name="twitter:image" content="https://palmaura.app/og.svg" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
@@ -22,112 +22,151 @@
   {
     "@context": "https://schema.org",
     "@type": "MobileApplication",
-    "name": "Palmaura",
+    "name": "PalmAura",
     "url": "https://palmaura.app/",
     "applicationCategory": "LifestyleApplication",
     "operatingSystem": "iOS",
-    "description": "Palmaura turns a palm photo into a beautiful, personal AI palm reading."
+    "description": "PalmAura turns a palm photo into a symbolic AI palm reading with visible palm line highlights."
   }
   </script>
 </head>
 <body>
-  <main class="shell">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="/" aria-label="Palmaura home">
-        <span class="mark" aria-hidden="true">✦</span>
-        <span>Palmaura</span>
-      </a>
-      <div class="nav-links">
-        <a href="#how">How it works</a>
-        <a href="#privacy">Privacy</a>
-        <a class="nav-cta" href="mailto:hello@palmaura.app?subject=Palmaura%20waitlist">Join waitlist</a>
-      </div>
+  <div class="paper-grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="PalmAura home">
+      <span class="brand-sigil" aria-hidden="true">☉</span>
+      <span>PalmAura</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#reading">The reading</a>
+      <a href="#method">The method</a>
+      <a href="#privacy">Privacy</a>
+      <a class="nav-cta" href="mailto:hello@palmaura.app?subject=PalmAura%20early%20access">Early access</a>
     </nav>
+  </header>
 
-    <section class="hero">
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">AI palm readings · coming soon</p>
-        <h1>Your palm has a story. Palmaura helps you read it.</h1>
-        <p class="lede">Upload a clear palm photo and get a beautiful, personal reading about your love line, life line, career energy, intuition, and the patterns that make you you.</p>
-        <div class="actions">
-          <a class="button primary" href="mailto:hello@palmaura.app?subject=Palmaura%20waitlist&body=Add%20me%20to%20the%20Palmaura%20waitlist.">Join the waitlist</a>
-          <a class="button secondary" href="#how">See how it works</a>
+        <p class="kicker">A modern palmistry cabinet for iPhone</p>
+        <h1 id="hero-title">Read the map in your hand.</h1>
+        <p class="lede">PalmAura studies a clear palm photo, traces the major visible lines, and returns a symbolic reading for love, momentum, intuition, and the path you keep choosing.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="mailto:hello@palmaura.app?subject=PalmAura%20early%20access&body=Add%20me%20to%20PalmAura%20early%20access.">Request early access</a>
+          <a class="button secondary" href="#method">How the lines are traced</a>
         </div>
-        <p class="microcopy">Built for reflection, delight, and sharing — not medical, legal, or financial advice.</p>
+        <p class="fineprint">For entertainment and self-reflection only. Not medical, legal, financial, or life-critical advice.</p>
       </div>
-      <div class="phone-card" aria-label="Preview of a Palmaura palm reading">
-        <div class="glow"></div>
-        <div class="phone">
-          <div class="phone-top"></div>
-          <div class="palm-scene">
-            <svg class="palm" viewBox="0 0 320 420" role="img" aria-label="Illustrated palm with glowing reading lines">
-              <defs>
-                <linearGradient id="skin" x1="0" x2="1" y1="0" y2="1">
-                  <stop offset="0" stop-color="#f4b7a5" />
-                  <stop offset="1" stop-color="#b36b7f" />
-                </linearGradient>
-                <linearGradient id="line" x1="0" x2="1">
-                  <stop offset="0" stop-color="#ffe0a6" />
-                  <stop offset="1" stop-color="#db7cff" />
-                </linearGradient>
-              </defs>
-              <path d="M115 155 C110 110 119 78 139 76 C155 75 160 102 162 134 L165 178 C169 108 178 52 201 54 C221 56 222 92 217 135 L212 184 C226 119 244 91 263 98 C283 105 277 143 260 190 L242 238 C260 218 283 211 294 225 C307 242 276 271 247 299 C218 328 207 368 166 371 C116 375 83 341 74 294 L50 178 C46 157 55 141 75 140 C94 139 103 154 108 179 Z" fill="url(#skin)" />
-              <path d="M98 242 C128 208 174 206 217 231" fill="none" stroke="url(#line)" stroke-width="5" stroke-linecap="round" />
-              <path d="M108 279 C142 297 188 296 224 265" fill="none" stroke="url(#line)" stroke-width="4" stroke-linecap="round" opacity=".9" />
-              <path d="M156 184 C150 232 152 288 171 336" fill="none" stroke="url(#line)" stroke-width="4" stroke-linecap="round" opacity=".85" />
-              <path d="M125 325 C132 288 147 260 184 224" fill="none" stroke="#fff1be" stroke-width="3" stroke-linecap="round" opacity=".65" />
-              <circle cx="103" cy="244" r="5" fill="#fff6c9" />
-              <circle cx="219" cy="231" r="5" fill="#e9a6ff" />
-              <circle cx="170" cy="336" r="5" fill="#fff6c9" />
-            </svg>
-          </div>
-          <div class="reading-card">
-            <p class="reading-label">Today’s aura</p>
-            <h2>Warm intuition, bold timing</h2>
-            <p>Your head line suggests fast pattern recognition. The heart line bends toward loyalty, but asks for clearer boundaries.</p>
-          </div>
-        </div>
-      </div>
+
+      <figure class="plate" aria-label="Vintage palmistry hand diagram inspired by antique palm reading charts">
+        <div class="plate-label top">Plate I · The Principal Lines</div>
+        <svg class="palm-plate" viewBox="0 0 620 820" role="img" aria-labelledby="palm-title palm-desc">
+          <title id="palm-title">PalmAura palmistry chart</title>
+          <desc id="palm-desc">An antique-style hand diagram with labeled palm regions and major line highlights.</desc>
+          <defs>
+            <filter id="roughen">
+              <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="7" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2" />
+            </filter>
+            <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(22)">
+              <path d="M0 0 L0 8" stroke="#302a22" stroke-width="0.55" opacity="0.35" />
+            </pattern>
+          </defs>
+
+          <g class="hand-ink" filter="url(#roughen)">
+            <path class="hand-fill" d="M154 418 C132 365 109 292 83 242 C67 211 42 205 29 223 C14 245 27 286 48 333 C72 387 91 431 105 474 C116 512 128 575 147 629 C171 697 221 754 298 764 C382 775 443 726 468 652 C484 605 492 562 510 523 C528 483 566 448 591 417 C616 385 612 355 590 346 C565 337 540 361 515 390 L489 421 C502 363 522 297 538 238 C549 197 540 169 515 164 C489 158 472 184 458 226 L432 323 C435 260 439 176 439 112 C438 68 422 40 395 41 C367 42 355 74 353 119 L348 311 C337 237 322 139 310 86 C300 45 281 24 255 30 C231 36 225 67 232 107 L264 307 C242 248 217 189 198 148 C181 112 156 98 135 112 C112 128 116 160 134 198 C158 250 179 315 194 382 C184 392 171 404 154 418 Z" />
+            <path class="hatching" d="M154 418 C132 365 109 292 83 242 C67 211 42 205 29 223 C14 245 27 286 48 333 C72 387 91 431 105 474 C116 512 128 575 147 629 C171 697 221 754 298 764 C382 775 443 726 468 652 C484 605 492 562 510 523 C528 483 566 448 591 417 C616 385 612 355 590 346 C565 337 540 361 515 390 L489 421 C502 363 522 297 538 238 C549 197 540 169 515 164 C489 158 472 184 458 226 L432 323 C435 260 439 176 439 112 C438 68 422 40 395 41 C367 42 355 74 353 119 L348 311 C337 237 322 139 310 86 C300 45 281 24 255 30 C231 36 225 67 232 107 L264 307 C242 248 217 189 198 148 C181 112 156 98 135 112 C112 128 116 160 134 198 C158 250 179 315 194 382 C184 392 171 404 154 418 Z" />
+            <path class="outline" d="M154 418 C132 365 109 292 83 242 C67 211 42 205 29 223 C14 245 27 286 48 333 C72 387 91 431 105 474 C116 512 128 575 147 629 C171 697 221 754 298 764 C382 775 443 726 468 652 C484 605 492 562 510 523 C528 483 566 448 591 417 C616 385 612 355 590 346 C565 337 540 361 515 390 L489 421 C502 363 522 297 538 238 C549 197 540 169 515 164 C489 158 472 184 458 226 L432 323 C435 260 439 176 439 112 C438 68 422 40 395 41 C367 42 355 74 353 119 L348 311 C337 237 322 139 310 86 C300 45 281 24 255 30 C231 36 225 67 232 107 L264 307 C242 248 217 189 198 148 C181 112 156 98 135 112 C112 128 116 160 134 198 C158 250 179 315 194 382 C184 392 171 404 154 418 Z" />
+
+            <path class="crease faint" d="M135 567 C188 543 259 541 337 568 C383 583 421 585 456 574" />
+            <path class="crease fate" d="M326 700 C324 642 323 588 318 534 C313 484 302 438 284 391" />
+            <path class="crease life" d="M276 392 C225 421 197 474 191 535 C187 585 207 637 255 682" />
+            <path class="crease head" d="M206 443 C269 457 333 451 403 424 C439 410 466 402 492 406" />
+            <path class="crease heart" d="M188 374 C257 351 334 350 407 374 C448 388 480 388 512 369" />
+            <path class="crease minor" d="M244 512 C291 503 352 511 405 535" />
+            <path class="crease minor" d="M214 613 C278 602 345 606 426 628" />
+            <path class="crease minor" d="M368 392 C385 434 396 480 398 539" />
+          </g>
+
+          <g class="labels">
+            <text x="244" y="70">First</text><text x="242" y="93">Phalange</text>
+            <text x="357" y="88">First</text><text x="357" y="111">Phalange</text>
+            <text x="474" y="213">First</text><text x="474" y="236">Phalange</text>
+            <text x="142" y="155">First</text><text x="141" y="178">Phalange</text>
+            <text x="87" y="306">1</text><text x="104" y="392">2</text>
+            <text x="231" y="562">VENUS</text><text x="230" y="610">3</text>
+            <text x="255" y="330">♃</text><text x="223" y="354">JUPITER</text>
+            <text x="355" y="318">♄</text><text x="342" y="343">SATURN</text>
+            <text x="462" y="333">☉</text><text x="455" y="358">APOLLO</text>
+            <text x="516" y="417">☿</text><text x="504" y="443">MERCURY</text>
+            <text x="412" y="608">☾</text><text x="394" y="633">LUNA</text>
+            <text class="line-label" x="390" y="387" transform="rotate(18 390 387)">Heart Line</text>
+            <text class="line-label" x="361" y="458" transform="rotate(-11 361 458)">Head Line</text>
+            <text class="line-label" x="161" y="557" transform="rotate(-81 161 557)">Life Line</text>
+            <text class="line-label" x="338" y="594" transform="rotate(84 338 594)">Fate Line</text>
+            <text class="bracelet" x="223" y="731">BRACELETS OF LIFE</text>
+          </g>
+        </svg>
+        <figcaption>Inspired by antique palmistry plates. Powered by modern visual line tracing.</figcaption>
+      </figure>
     </section>
 
-    <section id="how" class="section cards">
-      <div class="section-heading">
-        <p class="eyebrow">How it works</p>
-        <h2>A reading in three moments.</h2>
-      </div>
-      <article class="card"><span>01</span><h3>Snap your palm</h3><p>Use a clear, well-lit photo of your dominant hand. Palmaura guides framing so the major lines are visible.</p></article>
-      <article class="card"><span>02</span><h3>Trace the patterns</h3><p>AI reads visible palm features and turns them into plain-language insights with a mystical, reflective voice.</p></article>
-      <article class="card"><span>03</span><h3>Save or share</h3><p>Get a polished reading card for love, life, career, and energy — made to revisit or send to a friend.</p></article>
-    </section>
-
-    <section class="section split">
+    <section id="reading" class="section two-up">
       <div>
-        <p class="eyebrow">Launch basics</p>
-        <h2>Made for fun, reflection, and a little cosmic nudge.</h2>
+        <p class="kicker">What PalmAura returns</p>
+        <h2>A palm reading that looks at your actual hand.</h2>
       </div>
-      <ul class="checks">
-        <li>Personalized palm reading from a photo</li>
-        <li>Beautiful share cards for social and group chats</li>
-        <li>Clear disclaimers: entertainment and self-reflection only</li>
-        <li>No payments at launch</li>
-      </ul>
+      <div class="copy-block">
+        <p>Instead of drawing a generic template, PalmAura uses the photo you provide. The app identifies the main palm lines, aligns the overlay to nearby visible creases, and writes a reading from the patterns it can see.</p>
+        <ul class="ruled-list">
+          <li><span>Heart line</span> emotional style, loyalty, boundaries</li>
+          <li><span>Head line</span> mental rhythm, decision-making, focus</li>
+          <li><span>Life line</span> vitality, grounding, how you recover</li>
+          <li><span>Fate line</span> momentum, work, timing, direction</li>
+        </ul>
+      </div>
     </section>
 
-    <section id="privacy" class="section privacy">
-      <p class="eyebrow">Privacy-first intent</p>
-      <h2>Your hand is personal.</h2>
-      <p>Palmaura is being designed to make palm readings feel intimate without being invasive. The launch version will explain how photos are handled before you upload anything.</p>
-      <div class="legal-links">
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
+    <section id="method" class="section method-grid">
+      <article>
+        <span class="step">I</span>
+        <h3>Frame the palm</h3>
+        <p>On-device guidance checks for a clear, well-lit hand photo before a reading is requested.</p>
+      </article>
+      <article>
+        <span class="step">II</span>
+        <h3>Trace the lines</h3>
+        <p>AI identifies the major palm-line paths; local pixel snapping keeps the overlay attached to real creases.</p>
+      </article>
+      <article>
+        <span class="step">III</span>
+        <h3>Receive the story</h3>
+        <p>Your reading is written in a symbolic voice: direct enough to feel personal, mystical enough to be fun.</p>
+      </article>
+    </section>
+
+    <section id="privacy" class="section privacy-card">
+      <div>
+        <p class="kicker">Private by design</p>
+        <h2>Your hand is personal.</h2>
+      </div>
+      <div>
+        <p>PalmAura is designed for reflection without pretending to be authority. The launch experience makes the entertainment-only boundary clear and explains photo handling before upload.</p>
+        <div class="legal-links">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="mailto:hello@palmaura.app">hello@palmaura.app</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© <span id="year">2026</span> Palmaura. All rights reserved.</p>
-    <p><a href="mailto:hello@palmaura.app">hello@palmaura.app</a></p>
+    <p>© <span id="year">2026</span> PalmAura</p>
+    <p>iOS app · coming soon</p>
   </footer>
+
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
