@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="a" cx="20%" cy="10%" r="70%"><stop stop-color="#f39ab7" stop-opacity=".5"/><stop offset="1" stop-color="#130817" stop-opacity="0"/></radialGradient>
+    <radialGradient id="b" cx="80%" cy="20%" r="70%"><stop stop-color="#a981ff" stop-opacity=".45"/><stop offset="1" stop-color="#130817" stop-opacity="0"/></radialGradient>
+    <linearGradient id="p" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ffd889"/><stop offset="1" stop-color="#db7cff"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#100713"/>
+  <rect width="1200" height="630" fill="url(#a)"/>
+  <rect width="1200" height="630" fill="url(#b)"/>
+  <circle cx="905" cy="315" r="172" fill="none" stroke="#fff8ec" stroke-opacity=".12" stroke-width="2"/>
+  <path d="M850 286c-8-76 9-123 39-125 23-2 30 36 31 91 8-86 25-138 59-135 38 4 34 77 25 147 32-77 66-108 94-86 28 22 2 99-42 175-40 69-74 141-165 141-77 0-127-56-141-135l-29-122c-9-42 39-55 64-15l31 81z" fill="url(#p)" opacity=".95"/>
+  <path d="M790 360c72-65 150-64 235-17M820 416c65 31 135 25 197-39M910 295c-13 62-9 122 22 181" fill="none" stroke="#fff8ec" stroke-width="12" stroke-linecap="round" opacity=".9"/>
+  <text x="82" y="160" fill="#ffd889" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="8">PALMAURA</text>
+  <text x="78" y="290" fill="#fff8ec" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900" letter-spacing="-5">Your palm has</text>
+  <text x="78" y="388" fill="#fff8ec" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900" letter-spacing="-5">a story.</text>
+  <text x="82" y="470" fill="#d6bdd4" font-family="Inter, Arial, sans-serif" font-size="34">AI palm readings from a photo.</text>
+</svg>
