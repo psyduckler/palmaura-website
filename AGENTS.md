@@ -23,7 +23,24 @@ Use `npm run smoke:local` for local preview. Do not run `npm run deploy` unless 
 - Styles: `public/styles.css`
 - Privacy: `public/privacy.html`
 - Terms: `public/terms.html`
+- Blog content (source): `content/blog/*.md`
+- Blog output (generated, committed): `public/blog/*.html`
+- Blog templates: `templates/blog-article.html`, `templates/blog-index.html`
+- Blog build script: `tools/build-blog.mjs`
 - SEO/discovery: `public/robots.txt`, `public/sitemap.xml`, page metadata in HTML heads
+
+## Blog workflow
+
+Articles are authored as markdown in `content/blog/`. The build script generates the corresponding HTML, the blog index, and the sitemap. Both the markdown source and the generated HTML are committed.
+
+```bash
+npm install                  # first time only
+# edit or add content/blog/your-article.md
+npm run build:blog           # regenerates public/blog/*.html + sitemap.xml
+git add content/blog public/blog public/sitemap.xml
+```
+
+See `content/blog/_README.md` for the frontmatter schema and authoring conventions.
 
 ## Product direction
 

@@ -2,8 +2,16 @@
   "name": "palmaura-website",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
+    "build:blog": "node tools/build-blog.mjs",
+    "build": "npm run build:blog",
     "deploy": "wrangler pages deploy public --project-name palmaura",
     "smoke:local": "python3 -m http.server 8788 --directory public"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0"
   }
 }
