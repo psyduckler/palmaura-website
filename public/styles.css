@@ -59,13 +59,17 @@ body {
   border-radius: 999px;
 }
 
-/* Scroll Reveal */
+/* Scroll Reveal: visible by default; JS opt-in hides sections until observed. */
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+.js .reveal {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
-.reveal.active {
+.js .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
@@ -739,8 +743,20 @@ h1 em, h2 em, h3 em {
   }
 }
 
-/* Respect reduced-motion: nothing animates here, but disable any hover lifts. */
+/* Respect reduced-motion preferences for decorative and reveal motion. */
 @media (prefers-reduced-motion: reduce) {
+  .starfield,
+  .constellation .palm {
+    animation: none;
+  }
+  .site-header,
+  .js .reveal {
+    transition: none;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
   .cta-primary:hover {
     transform: none;
   }

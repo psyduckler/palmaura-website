@@ -21,6 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500;600;700&display=swap" />
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="/styles.css" />
   <script type="application/ld+json">
@@ -256,28 +257,36 @@
 
     // Sticky Header
     var header = document.querySelector('.site-header');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 20) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
+    function updateHeaderState() {
+      if (!header) return;
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }
+    updateHeaderState();
+    window.addEventListener('scroll', updateHeaderState, { passive: true });
 
     // Scroll Reveal
-    var reveals = document.querySelectorAll('.reveal');
-    var observer = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          observer.unobserve(entry.target);
-        }
+    var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+    function revealSection(section) {
+      section.classList.add('active');
+    }
+
+    var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      reveals.forEach(revealSection);
+    } else {
+      var observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            revealSection(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      reveals.forEach(function(reveal) {
+        observer.observe(reveal);
       });
-    }, { threshold: 0.15 });
-    
-    reveals.forEach(function(reveal) {
-      observer.observe(reveal);
-    });
+    }
   </script>
 </body>
 </html>
