@@ -118,7 +118,7 @@ function renderIndex(articles, template) {
           <time datetime="${a.date_published}">${formatDate(a.date_published)}</time>
         </a>
       </li>`).join('');
-  return template.split('{{ARTICLES}}').join(items);
+  return template.split('        {{ARTICLES}}').join(items.trimStart());
 }
 
 function updateSitemap(articles) {
