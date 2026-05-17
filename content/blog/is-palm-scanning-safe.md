@@ -13,7 +13,7 @@ faqs:
   - q: "What does 'on-device processing' actually mean?"
     a: "It means the analysis (detecting lines, interpreting their shape) happens inside the app on your phone, without uploading the photo to a remote server. The photo never leaves your device. Apps that process on-device can still send some data to a server — for example, anonymous interpretation requests — but the image itself stays local."
   - q: "Will PalmAura upload my palm photo to the cloud?"
-    a: "PalmAura's homepage describes on-device photo guidance and local pixel snapping for line detection. The full product privacy notice will be published before the app launches with photo uploads; until then, we recommend reading any app's product-specific privacy policy carefully (not just the website privacy policy)."
+    a: "PalmAura is being designed around data minimization, clear consent, and limiting photo exposure wherever possible. The full product privacy notice will be published before the app launches with photo-based readings; until then, we recommend reading any app's product-specific privacy policy carefully (not just the website privacy policy)."
   - q: "How long does a palm reading app keep your photos?"
     a: "It varies by app and is one of the most important questions to ask. Some apps delete the photo immediately after processing; some retain it indefinitely to 'improve the model'; some upload it to third parties. The right answer for a symbolic-reading app is the shortest retention possible — ideally none."
   - q: "What should I look for in a palm reading app's privacy policy?"
@@ -61,7 +61,7 @@ If an app is vague on any of these — or worse, if it does not publish answers 
 
 Two things are worth knowing about PalmAura specifically, and one thing we will not yet pretend to know.
 
-PalmAura's homepage describes **on-device photo guidance** — the camera-and-framing assistance that checks for a clear, well-lit hand photo before a reading is requested — and **local pixel snapping** for line detection, which keeps the visible line overlay attached to real creases in the image. Both of these are local operations that happen on the device.
+PalmAura's product posture is privacy-first: minimize photo exposure, explain exactly what happens to the image, ask for consent before any server-side processing, and keep retention as short as possible. The full product privacy notice will be published before the app launches with photo-based readings.
 
 The website's current privacy notice is also clear that this landing page does not collect palm photos at all, because the app has not launched. The product privacy notice — the one that will describe exactly how photos are handled when the app does ship — will be published before PalmAura starts accepting photo uploads.
 

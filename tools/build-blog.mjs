@@ -48,7 +48,8 @@ function renderArticle(filePath, template) {
 
   const dateModified = data.date_modified || data.date_published;
   const reviewer = data.reviewer || 'PalmAura Editorial Team';
-  const contentHtml = md.render(content);
+  const contentForRender = content.replace(/<aside class="visual-placeholder">[\s\S]*?<\/aside>?/g, '');
+  const contentHtml = md.render(contentForRender);
 
   let faqHtml = '';
   let faqJsonLdScript = '';

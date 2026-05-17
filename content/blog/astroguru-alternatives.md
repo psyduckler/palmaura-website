@@ -90,7 +90,7 @@ The specific differentiation, named plainly:
 
 **The framing.** PalmAura's "symbolic, not predictive" stance is not in the fine print — it is in the body of every reading. The language describes temperament, never forecasts events. This is the editorial discipline most competitors do not maintain.
 
-**The privacy.** On-device photo guidance, local pixel snapping for line detection, no upload of photos to remote servers for the core reading. See [biometric privacy](/blog/is-palm-scanning-safe.html) for the broader framework PalmAura sits within.
+**The privacy posture.** PalmAura should be judged on clear consent, data minimization, short retention, and a product privacy notice that explains exactly how palm photos are handled before photo-based readings launch. See [biometric privacy](/blog/is-palm-scanning-safe.html) for the broader framework PalmAura sits within.
 
 **The depth.** PalmAura draws on Indian, Chinese, and Western palmistry simultaneously and surfaces where they converge and where they differ. Most competitors draw on Western only.
 
