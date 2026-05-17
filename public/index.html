@@ -17,8 +17,10 @@
   <meta name="twitter:description" content="A vintage-inspired AI palm reading app for iOS." />
   <meta name="twitter:image" content="https://palmaura.app/og.svg" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="/styles.css" />
   <script type="application/ld+json">
@@ -161,7 +163,7 @@
       </div>
     </section>
 
-    <section id="reading" class="section section-reading">
+    <section id="reading" class="section section-reading reveal">
       <p class="eyebrow">What PalmAura returns</p>
       <h2>A palm reading that <em>looks at your actual hand.</em></h2>
       <div class="reading-grid">
@@ -175,7 +177,7 @@
       </div>
     </section>
 
-    <section id="method" class="section section-method">
+    <section id="method" class="section section-method reveal">
       <p class="eyebrow">The Method</p>
       <h2>From hand to story <em>in three steps.</em></h2>
       <ol class="steps">
@@ -197,7 +199,7 @@
       </ol>
     </section>
 
-    <section id="why" class="section section-why">
+    <section id="why" class="section section-why reveal">
       <p class="eyebrow">Why PalmAura</p>
       <h2>A modern palmistry cabinet, <em>built for the pocket.</em></h2>
       <div class="why-grid">
@@ -216,7 +218,7 @@
       </div>
     </section>
 
-    <section id="privacy" class="section section-privacy">
+    <section id="privacy" class="section section-privacy reveal">
       <p class="eyebrow">Private by design</p>
       <h2>Your hand is personal.</h2>
       <p class="privacy-lede">PalmAura is designed for reflection without pretending to be authority. The launch experience makes the entertainment-only boundary clear and explains photo handling before upload.</p>
@@ -227,7 +229,7 @@
       </div>
     </section>
 
-    <section class="section section-cta">
+    <section class="section section-cta reveal">
       <div class="ornament" aria-hidden="true"><span class="rule"></span><span class="glyph">✦</span><span class="rule"></span></div>
       <h2>Bring a question.</h2>
       <p>Love · Work · Money · The Path</p>
@@ -251,6 +253,31 @@
   <script>
     var y = new Date().getFullYear();
     document.getElementById('year').textContent = y;
+
+    // Sticky Header
+    var header = document.querySelector('.site-header');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Scroll Reveal
+    var reveals = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    
+    reveals.forEach(function(reveal) {
+      observer.observe(reveal);
+    });
   </script>
 </body>
 </html>
