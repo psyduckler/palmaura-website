@@ -35,15 +35,31 @@ Do not deploy without explicit approval if you are acting as an external/agent c
 ## Files
 
 ```txt
-public/index.html      Homepage
-public/styles.css      Global styles
-public/privacy.html    Privacy policy
-public/terms.html      Terms of service
-public/robots.txt      Robots directives
-public/sitemap.xml     Sitemap
-public/og.svg          Open Graph image
-public/favicon.svg     Favicon
+public/index.html         Homepage
+public/styles.css         Global styles
+public/privacy.html       Privacy policy
+public/terms.html         Terms of service
+public/blog/index.html    Blog index (generated)
+public/blog/*.html        Blog articles (generated)
+public/robots.txt         Robots directives
+public/sitemap.xml        Sitemap (generated)
+public/og.svg             Open Graph image
+public/favicon.svg        Favicon
+content/blog/*.md         Blog article sources
+templates/blog-*.html     Blog templates
+tools/build-blog.mjs      Blog build script
 ```
+
+## Blog
+
+Articles are written as markdown in `content/blog/` and rendered to static HTML by `npm run build:blog`. Both source and output are committed.
+
+```bash
+npm install              # first time only
+npm run build:blog       # build content/blog/*.md → public/blog/*.html + sitemap
+```
+
+See `content/blog/_README.md` for the frontmatter schema.
 
 ## Contribution guidelines
 
