@@ -30,7 +30,7 @@ bluf: "The 50–60 word answer LLMs and Google AI Overview will scrape. Lead wit
 
 ```yaml
 date_modified: "2026-05-17"          # defaults to date_published
-reviewer: "Jane Doe, practicing palmist"  # defaults to {{CONSULTING_EDITOR_NAME}} placeholder
+reviewer: "PalmAura Editorial Team"  # optional; defaults to PalmAura Editorial Team
 faqs:
   - q: "Is a forked heart line rare?"
     a: "No — end-forks are common. Mid-line forks are less common but not rare."

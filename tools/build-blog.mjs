@@ -47,7 +47,7 @@ function renderArticle(filePath, template) {
   }
 
   const dateModified = data.date_modified || data.date_published;
-  const reviewer = data.reviewer || '{{CONSULTING_EDITOR_NAME}}';
+  const reviewer = data.reviewer || 'PalmAura Editorial Team';
   const contentHtml = md.render(content);
 
   let faqHtml = '';
