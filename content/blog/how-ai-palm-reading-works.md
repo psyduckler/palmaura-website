@@ -15,7 +15,7 @@ faqs:
   - q: "How accurate is AI line detection?"
     a: "On a well-lit, well-framed photo, modern AI line detection is highly reliable for the four major lines. It struggles with faint secondary lines, with hands photographed in poor lighting, and with photos where the palm is tilted or partially out of frame. Most accuracy issues are photo issues, not algorithm issues."
   - q: "What does PalmAura's AI do that other apps don't?"
-    a: "PalmAura's approach centres on three things: on-device photo guidance (the camera checks for a usable photo before a reading is requested), local pixel snapping (the line overlay attaches to real creases rather than approximate paths), and explicit symbolic framing (readings disclose what they are — symbolic, not predictive). Many competitors do one or two of these; few do all three."
+    a: "PalmAura's approach centres on three things: privacy-forward photo guidance, line overlays that stay attached to real creases rather than approximate paths, and explicit symbolic framing (readings disclose what they are — symbolic, not predictive). Many competitors do one or two of these; few do all three."
   - q: "Can AI palm reading replace a human palmist?"
     a: "No, and it shouldn't try. AI is better at the mechanical part of palmistry (consistent line identification, cross-tradition coverage, disclosure discipline). A skilled human is better at the contextual part (reading the room, weighing your specific question). The most useful posture is to treat them as complementary, not as competitors."
 ---
@@ -71,7 +71,7 @@ Two architectures are common in the category:
 
 On-device processing is the stronger privacy position for one reason: the photo itself never travels. If something goes wrong — a breach, a leak, a vendor change — there is no photo on a remote system to expose. The detected line data, even if intercepted, is meaningless without the photo to attach it to.
 
-This is also why PalmAura's homepage describes on-device photo guidance and local pixel snapping for line detection. For the broader privacy framework — what biometric data actually means, what to ask of any palm reading app — see our piece on [biometric privacy in a palm reading app](/blog/is-palm-scanning-safe.html).
+This is also why PalmAura emphasizes privacy-forward photo guidance and line overlays that stay attached to real creases rather than generic palm paths. For the broader privacy framework — what biometric data actually means, what to ask of any palm reading app — see our piece on [biometric privacy in a palm reading app](/blog/is-palm-scanning-safe.html).
 
 ## Where AI augments traditional palmistry — and where it doesn't
 

@@ -15,7 +15,7 @@ faqs:
   - q: "Should AI palm reading apps be regulated?"
     a: "The existing regulatory frameworks (FTC for deceptive advertising, state biometric privacy laws like BIPA in Illinois, consumer protection laws) already cover most of the worst harms. The category does not need new regulation as much as it needs honest self-regulation by serious operators — and enforcement of existing rules against the worst actors."
   - q: "What makes PalmAura different from other AI fortune-telling apps?"
-    a: "PalmAura is built around the principles in this piece: no predictions of events, no medical/financial claims, on-device photo guidance, contextual disclosure throughout (not just in fine print), no fear-based monetisation. The principles are the product, not an afterthought."
+    a: "PalmAura is built around the principles in this piece: no predictions of events, no medical/financial claims, privacy-forward photo handling, contextual disclosure throughout (not just in fine print), no fear-based monetisation. The principles are the product, not an afterthought."
 ---
 
 The category of "AI fortune-telling apps" — palmistry, astrology, tarot, and adjacent symbolic readings delivered through phones with AI components — is growing rapidly, and the ethical floor of the category is being set right now by the apps that get built. The honest version of how to build these apps well is short. The dishonest version is more common, and worth naming directly.
@@ -75,7 +75,7 @@ For the broader frame on what AI palm reading can and can't claim, see [are AI p
 
 The five principles above are not policy decisions PalmAura considered and adopted. They are the structural design of the product.
 
-The decision to frame readings as "symbolic, not predictive" came before the first line of code. The decision to use on-device photo guidance came from the privacy framework, not from feature parity with competitors. The decision to disclose medical and financial limits in plain language came from reading the harm history of the category and refusing to participate in it.
+The decision to frame readings as "symbolic, not predictive" came before the first line of code. The decision to treat photo handling as a privacy design problem came from the privacy framework, not from feature parity with competitors. The decision to disclose medical and financial limits in plain language came from reading the harm history of the category and refusing to participate in it.
 
 This is not virtue signalling. It is a structural bet: that the long-term audience for AI fortune-telling will increasingly demand the responsible version, and that the apps that are built around responsibility from the start will be the ones that last. The apps built around aggressive monetisation of vulnerable users may produce short-term revenue. They are unlikely to produce a category that survives its current regulatory and reputational pressure.
 
