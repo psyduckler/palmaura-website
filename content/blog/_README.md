@@ -46,4 +46,4 @@ Inline `<aside class="visual-placeholder">` blocks mark where a custom illustrat
 <aside class="visual-placeholder">VISUAL: A Victorian-style hand diagram showing the heart line forking into two distinct branches at the end.</aside>
 ```
 
-These render as styled "VISUAL:" callout boxes until the real illustration replaces them.
+These are authoring notes only. `tools/build-blog.mjs` strips `visual-placeholder` blocks from generated public HTML until real illustrations are available, so they do not appear on production pages.
